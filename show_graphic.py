@@ -16,18 +16,20 @@ profile = instaloader.Profile
 # brothers = LoadData.load_data_intagram()
 brothers = LoadData.load_data_file()
 
-dataframe_name = pd.DataFrame(list(map(lambda b: [b.Name, (int(b.Followers/1000))], brothers)))
+dataframe_name = pd.DataFrame(list(map(lambda b: [b.Name, b.Followers], brothers)))
 dataframe_name.columns = ['Nome', 'Seguidores']
+
 print(dataframe_name)
 
+dataframe_name_img = pd.DataFrame(list(map(lambda b: [b.Name, (int(b.Followers/1000))], brothers)))
+dataframe_name_img.columns = ['Nome', 'Seguidores']
 sns.set(rc={'figure.figsize': (20, 10)})
 graphic = sns.barplot(
-    x=dataframe_name["Seguidores"],
-    y=dataframe_name['Nome'],
-    data=dataframe_name
+    x=dataframe_name_img["Seguidores"],
+    y=dataframe_name_img['Nome'],
+    data=dataframe_name_img
 )
 graphic.bar_label(graphic.containers[0])
-
 figure = graphic.get_figure()
 
 # Write Files
