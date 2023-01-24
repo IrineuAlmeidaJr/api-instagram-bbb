@@ -24,3 +24,4 @@ class User:
     def __str__(self):
         return f'{self.Name},{self.Instagram_username},' \
                f'{self.Followers},{self.Url_image}'
+
