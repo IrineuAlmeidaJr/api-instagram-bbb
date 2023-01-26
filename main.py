@@ -38,19 +38,25 @@ def create_graphic(brothers):
 
 def write_documents(current_date, brothers, dataframe, graphic_figure):
     dataframe.to_excel('data/bbb_instagram.xlsx', index=False)
-    graphic_figure.savefig(f'data/bbb_instagram_{current_date}.png')
-    with open(f'data/bbb_instagram_{current_date}.txt', "w") as file:
+    graphic_figure.savefig(f'data/bbb_instagram.png')
+    with open(f'data/bbb_instagram.txt', "w") as file:
+        for item in brothers:
+            file.write(f'{item}\n')
+    with open(f'backup/bbb_instagram_{current_date}.txt', "w") as file:
         for item in brothers:
             file.write(f'{item}\n')
 
 
 def main():
+    pd.set_option('display.max_columns', 500)
+    pd.set_option('display.width', 1000)
+
     current_date = str(date.today())
-    # brothers = LoadData.load_data_file()
-    brothers = LoadData.load_data_intagram()
+    brothers = LoadData.load_data_file()
+    # brothers = LoadData.load_data_intagram()
     dataframe = create_dataframe(current_date, brothers)
     graphic_figure = create_graphic(brothers)
-    write_documents(current_date, brothers, dataframe, graphic_figure)
+    # write_documents(current_date, brothers, dataframe, graphic_figure)
 
 
 if __name__ == "__main__":
