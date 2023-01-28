@@ -1,6 +1,6 @@
 from flask import Flask, jsonify
 
-from model.LoadData import LoadData
+from utils.LoadData import LoadData
 
 app = Flask(__name__)
 

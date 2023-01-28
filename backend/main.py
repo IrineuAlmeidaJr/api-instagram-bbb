@@ -5,7 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from model.LoadData import LoadData
+from utils.LoadData import LoadData
 
 
 def create_dataframe(current_date, brothers):
