@@ -25,3 +25,10 @@ class User:
         return f'{self.Name},{self.Instagram_username},' \
                f'{self.Followers},{self.Url_image}'
 
+    def __repr__(self):
+        return {
+            "name": self.__name,
+            "instagram_username": self.__instagram_username,
+            "followers": self.__followers,
+            "url_image": self.__url_image
+        }
