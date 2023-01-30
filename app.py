@@ -14,3 +14,7 @@ def update_data():
     lista = [b.__repr__() for b in brothers]
 
     return jsonify(lista)
+
+
+if __name__ == '__main__':
+    app.run()
