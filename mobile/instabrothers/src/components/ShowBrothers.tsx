@@ -1,4 +1,6 @@
-import { Text, ScrollView, View} from "react-native";
+import { useEffect, useState } from "react";
+import { Text, ScrollView, View, Alert} from "react-native";
+import { api } from "../lib/axios";
 import { Brother } from "./Brother";
 
 type Brother = {
@@ -9,8 +11,34 @@ type Brother = {
     url_img: string;
 }
 
+type BrotherApi = {       
+    followers: number; 
+    instagram_username: string;
+    name: string;
+    url_image: string;
+}
+
 export function ShowBrothers() {
-    const brothers: Brother[] = [
+    const [brothers, setBrothers] = useState<BrotherApi[]>([])
+
+    function fetchData() {
+        try {
+            api.get("/brothers")
+            .then(response => {
+                setBrothers(response.data)
+                //console.log(response.data)
+            })
+            
+        } catch (error) {
+            Alert.alert('Ops', 'Erro ao carregar os perfils dos brothers');
+        }
+    } 
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    const brothersLocal: Brother[] = [
         { 
             name: 'Gabriel', 
             user_instagram: '@gabriel', 
@@ -57,6 +85,7 @@ export function ShowBrothers() {
     ];
 
     return (
+
         <ScrollView 
             showsVerticalScrollIndicator={false}
             className="mt-4 mb-8 px-4 bg-blue-400  rounded-xl"
@@ -68,10 +97,10 @@ export function ShowBrothers() {
                             <Brother 
                                 key={index} 
                                 name={brother.name} 
-                                user_instagram={brother.user_instagram}
-                                followers_before={brother.followers_before}
-                                followers_current={brother.followers_current}
-                                url_img={brother.url_img}
+                                user_instagram={brother.instagram_username}
+                                followers_before={0}
+                                followers_current={brother.followers}
+                                url_img={brother.url_image}
                             />
                         )
                     })

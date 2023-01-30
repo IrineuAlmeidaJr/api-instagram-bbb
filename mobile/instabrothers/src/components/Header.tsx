@@ -1,5 +1,5 @@
 import { useNavigation, useNavigationState } from '@react-navigation/native'
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import { AntDesign, Feather } from "@expo/vector-icons"
 
 

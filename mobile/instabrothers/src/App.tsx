@@ -7,8 +7,8 @@ import {
 } from '@expo-google-fonts/inter';
 
 
-import { Loading } from './src/components/Loading';
-import { Routes } from './src/routes';
+import { Loading } from './components/Loading';
+import { Routes } from './routes';
 import { StatusBar } from 'expo-status-bar';
 
 export default function App() {

@@ -18,6 +18,7 @@ interface Brother {
 
 export function Brother(brother: Brother) {
     const { navigate } = useNavigation();
+    //console.log(brother.url_img);
 
     return (
         <View className="flex-col justify-center items-center my-2">        
