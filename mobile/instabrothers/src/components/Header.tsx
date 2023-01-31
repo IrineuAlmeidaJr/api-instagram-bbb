@@ -41,9 +41,9 @@ export function Header() {
             onPress={() => navigate('allbrothersfollower')}
             >
                 < AntDesign 
-                        name="areachart"
-                        color='gray'
-                        size={20}
+                    name="areachart"
+                    color='gray'
+                    size={20}
                 />
 
                 <Text className="text-gray-500 ml-3 font-semibold text-base">

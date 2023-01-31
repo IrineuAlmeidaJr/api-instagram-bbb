@@ -103,6 +103,7 @@ export function ShowBrothers() {
                                 followers_before={initialsFollowers[index]}
                                 followers_current={brother.followers}
                                 url_img={brother.url_image}
+                                isDetailsBrother={true}
                             />
                         )
                     })
