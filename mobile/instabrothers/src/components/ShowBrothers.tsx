@@ -20,12 +20,14 @@ type BrotherApi = {
 
 export function ShowBrothers() {
     const [brothers, setBrothers] = useState<BrotherApi[]>([])
+    const [initialsFollowers, setInitialsFollowers] = useState<number[]>([])
 
     function fetchData() {
         try {
             api.get("/brothers")
             .then(response => {
-                setBrothers(response.data)
+                setBrothers(response.data.brothers)
+                setInitialsFollowers(response.data.followers_before)
                 //console.log(response.data)
             })
             
@@ -98,7 +100,7 @@ export function ShowBrothers() {
                                 key={index} 
                                 name={brother.name} 
                                 user_instagram={brother.instagram_username}
-                                followers_before={0}
+                                followers_before={initialsFollowers[index]}
                                 followers_current={brother.followers}
                                 url_img={brother.url_image}
                             />
