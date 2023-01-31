@@ -19,9 +19,7 @@ interface Brother {
 }
 
 export function Brother(brother: Brother) {
-    const { navigate } = useNavigation();    
-
-    console.log("ENTROU: " + brother.name );
+    const { navigate } = useNavigation();   
 
     return (
         <View className="flex-col justify-center items-center my-2" style={{width: DAY_SIZE + BROTHERS_MARGIN_BETWEEN }}>        
