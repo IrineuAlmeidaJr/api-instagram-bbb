@@ -30,5 +30,5 @@ class User:
             "name": self.__name,
             "instagram_username": self.__instagram_username,
             "followers": self.__followers,
-            "url_image": self.__url_image
+            "url_image": self.__url_image.rstrip()
         }

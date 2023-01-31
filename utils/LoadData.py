@@ -13,7 +13,7 @@ class LoadData:
     @staticmethod
     def load_data_file():
         brothers = []
-        with open(f'data/bbb_instagram.txt', "r") as file:
+        with open(f'backup/bbb_instagram_2023-01-31.txt', "r") as file:
             for item in file:
                 if item.strip() != '':
                     brother = item.split(',')

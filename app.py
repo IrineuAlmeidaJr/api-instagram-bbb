@@ -1,4 +1,5 @@
 from flask import Flask, jsonify
+import pandas as pd
 
 from utils.LoadData import LoadData
 
@@ -7,13 +8,16 @@ app = Flask(__name__)
 
 @app.route("/brothers", methods=['GET'])
 def update_data():
-    # Aqui não pode ser GET tem que ser um POST que gera um arquivo,
-    # o GET que vai ter pega o ultimo arquivo e retorna para o front
     brothers = LoadData.load_data_file()
 
-    lista = [b.__repr__() for b in brothers]
+    brothers = [b.__repr__() for b in brothers]
 
-    return jsonify(lista)
+    # Index in the 'followers_before' variable are the same as in the 'dataset' variable.
+    # -> Represents the following that 'brothers' had before entering the BBB
+    dataset = pd.read_excel('data/bbb_instagram.xlsx')
+    followers_before = dataset['2023-01-13'].tolist()
+
+    return jsonify({'brothers': brothers, 'followers_before': followers_before})
 
 
 if __name__ == '__main__':
