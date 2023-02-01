@@ -9,9 +9,9 @@ from utils.LoadData import LoadData
 
 
 def create_dataframe(current_date, brothers):
-    dir_file = 'data/bbb_instagram.xlsx'
+    dir_file = '../data/bbb_instagram.xlsx'
     if os.path.isfile(dir_file):
-        df = pd.read_excel('data/bbb_instagram.xlsx')
+        df = pd.read_excel('../data/bbb_instagram.xlsx')
         new_df = pd.DataFrame(list(map(lambda b: [b.Name, b.Followers], brothers)))
         df[current_date] = new_df[1]
     else:
@@ -37,12 +37,12 @@ def create_graphic(brothers):
 
 
 def write_documents(current_date, brothers, dataframe, graphic_figure):
-    dataframe.to_excel('data/bbb_instagram.xlsx', index=False)
-    graphic_figure.savefig(f'data/bbb_instagram.png')
-    with open(f'data/bbb_instagram.txt', "w") as file:
+    dataframe.to_excel('../data/bbb_instagram.xlsx', index=False)
+    graphic_figure.savefig(f'../data/bbb_instagram.png')
+    with open(f'../data/bbb_instagram.txt', "w") as file:
         for item in brothers:
             file.write(f'{item}\n')
-    with open(f'backup/bbb_instagram_{current_date}.txt', "w") as file:
+    with open(f'../backup/bbb_instagram_{current_date}.txt', "w") as file:
         for item in brothers:
             file.write(f'{item}\n')
 
