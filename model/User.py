@@ -60,9 +60,13 @@ class User:
     @staticmethod
     def get_follower_history(name):
         df = pd.read_excel('data/bbb_instagram.xlsx')
-        search_name = df[df['Nome'] == name].values.tolist()
+        followers = df[df['Nome'] == name].values.tolist()[0][1:]
         column_names = df.keys().tolist()
-        if len(search_name) > 0:
-            return {'days': column_names[1:], 'followers': search_name[0][1:]}
+
+        if len(followers) > 0:
+            return {
+                'days': column_names[1:],
+                'followers': [int(follower/1000) for follower in followers]
+            }
         return {'days': [], 'followers': []}
 
