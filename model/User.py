@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 
 class User:
@@ -66,7 +67,27 @@ class User:
         if len(followers) > 0:
             return {
                 'days': column_names[1:],
-                'followers': [int(follower/1000) for follower in followers]
+                'followers': [int(follower / 1000) for follower in followers]
             }
         return {'days': [], 'followers': []}
 
+    @staticmethod
+    def get_ranking():
+        df = pd.read_excel('data/bbb_instagram.xlsx')
+        df_column_names = df.keys().to_numpy()
+        url_brothers_image = pd.DataFrame(np.loadtxt('image/url_imagens_brothers.txt', dtype=str))
+
+        name_followers = df[[df_column_names[0], df_column_names[-1]]]
+        name_followers['url_image'] = url_brothers_image
+
+        name_followers = name_followers.sort_values(df_column_names[-1], ascending=False)
+
+        user_local = []
+        for index, row in name_followers.iterrows():
+            user_local.append({
+                'name': row[df_column_names[0]],
+                'followers': row[df_column_names[-1]],
+                'url_image': row['url_image']
+            })
+
+        return user_local
