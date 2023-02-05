@@ -13,3 +13,14 @@
 - `Gerar DataFrame`: busca perfil dos participantes do BBB 23
 
 
+## Instalação
+
+     - Instalar dependências do python
+    $ pip install -r requirements.txt
+
+    - Iniciar o servidor 
+    $ python3 main.py 
+        OU
+    $ flask run
+    
+  
