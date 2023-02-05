@@ -11,3 +11,7 @@ def get_all_brothers():
 
 def get_follower_history_brother(name):
     return jsonify(User.get_follower_history(name))
+
+
+def get_ranking_brothers():
+    return jsonify(User.get_ranking())
