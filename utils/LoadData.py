@@ -17,6 +17,6 @@ class LoadData:
             for item in file:
                 if item.strip() != '':
                     brother = item.split(',')
-                    brother = User(brother[0], brother[1], int(brother[2]), brother[3])
+                    brother = User(brother[0], brother[1], brother[2], int(brother[3]), brother[4])
                     brothers.append(brother)
         return brothers

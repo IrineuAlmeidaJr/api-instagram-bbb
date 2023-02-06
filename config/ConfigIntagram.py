@@ -13,6 +13,7 @@ class ConfigInstagram:
         bot = instaloader.Instaloader()
         profile = instaloader.Profile
         return [User(
+            id=1,
             name='Gabriel',
             instagram_username='vulgofop',
             followers=profile.from_username(bot.context, 'vulgofop').followers,
@@ -21,6 +22,7 @@ class ConfigInstagram:
                       '/gabriel-foto-330-270-bbb23.png'
         ),
             User(
+                id=2,
                 name='Paula',
                 instagram_username='paulafreitasr_',
                 followers=profile.from_username(bot.context, 'paulafreitasr_').followers,
@@ -29,6 +31,7 @@ class ConfigInstagram:
                           '/paula-foto-330-270-bbb23.png'
             ),
             User(
+                id=3,
                 name='Aline Wirley',
                 instagram_username='alinewirley',
                 followers=profile.from_username(bot.context, 'alinewirley').followers,
@@ -37,6 +40,7 @@ class ConfigInstagram:
                           '/aline-nova.png'
             ),
             User(
+                id=4,
                 name='Cezar Black',
                 instagram_username='cezar.black',
                 followers=profile.from_username(bot.context, 'cezar.black').followers,
@@ -45,6 +49,7 @@ class ConfigInstagram:
                           '/cezar-foto-330-270-bbb23.png'
             ),
             User(
+                id=5,
                 name='Bruna Griphao',
                 instagram_username='brunagriphao',
                 followers=profile.from_username(bot.context, 'brunagriphao').followers,
@@ -53,6 +58,7 @@ class ConfigInstagram:
                           '/bruna-griphao-foto-330-270-bbb23.png'
             ),
             User(
+                id=6,
                 name='Gustavo',
                 instagram_username='gustavo_benedetii',
                 followers=profile.from_username(bot.context, 'gustavo_benedetii').followers,
@@ -61,6 +67,7 @@ class ConfigInstagram:
                           '/gustavo-foto-330-270-bbb23.png'
             ),
             User(
+                id=7,
                 name='Fred',
                 instagram_username='fred',
                 followers=profile.from_username(bot.context, 'fred').followers,
@@ -69,6 +76,7 @@ class ConfigInstagram:
                           '/fred-foto-330-270-bbb23.png'
             ),
             User(
+                id=8,
                 name='Larissa',
                 instagram_username='larisantosbe',
                 followers=profile.from_username(bot.context, 'larisantosbe').followers,
@@ -77,6 +85,7 @@ class ConfigInstagram:
                           '/larissa-foto-330-270-bbb23.png'
             ),
             User(
+                id=9,
                 name='Ricardo',
                 instagram_username='rickcamargo',
                 followers=profile.from_username(bot.context, 'rickcamargo').followers,
@@ -85,6 +94,7 @@ class ConfigInstagram:
                           '/ricardo-foto-330-270-bbb23.png'
             ),
             User(
+                id=10,
                 name='Domitila Barros',
                 instagram_username='domitila_barros',
                 followers=profile.from_username(bot.context, 'domitila_barros').followers,
@@ -93,6 +103,7 @@ class ConfigInstagram:
                           '/domitila-barros-foto-330-270-bbb23.png'
             ),
             User(
+                id=11,
                 name='Antonio ‘Cara de Sapato’ Jr',
                 instagram_username='caradesapato',
                 followers=profile.from_username(bot.context, 'caradesapato').followers,
@@ -101,6 +112,7 @@ class ConfigInstagram:
                           '/cara-de-sapato-foto-330-270-bbb23.png'
             ),
             User(
+                id=12,
                 name='Sarah Aline',
                 instagram_username='saa_aline',
                 followers=profile.from_username(bot.context, 'saa_aline').followers,
@@ -109,6 +121,7 @@ class ConfigInstagram:
                           '/sarah-aline-foto-330-270-bbb23.png'
             ),
             User(
+                id=13,
                 name='Fred Nicácio',
                 instagram_username='frednicacio',
                 followers=profile.from_username(bot.context, 'frednicacio').followers,
@@ -117,6 +130,7 @@ class ConfigInstagram:
                           '/nicacio-foto-330-270-bbb23.png'
             ),
             User(
+                id=14,
                 name='Key Alves',
                 instagram_username='keyalves',
                 followers=profile.from_username(bot.context, 'keyalves').followers,
@@ -125,6 +139,7 @@ class ConfigInstagram:
                           '/key-alves-foto-330-270-bbb23.png'
             ),
             User(
+                id=15,
                 name='Marília',
                 instagram_username='mariliamiranda',
                 followers=profile.from_username(bot.context, 'mariliamiranda').followers,
@@ -133,6 +148,7 @@ class ConfigInstagram:
                           '/marilia-foto-330-270-bbb23.png'
             ),
             User(
+                id=16,
                 name='Cristian',
                 instagram_username='cristianvanelli',
                 followers=profile.from_username(bot.context, 'cristianvanelli').followers,
@@ -141,6 +157,7 @@ class ConfigInstagram:
                           '/cristian-foto-330-270-bbb23.png'
             ),
             User(
+                id=17,
                 name='Marvvila',
                 instagram_username='marvvila',
                 followers=profile.from_username(bot.context, 'marvvila').followers,
@@ -149,6 +166,7 @@ class ConfigInstagram:
                           '/marvvila-foto-330-270-bbb23.png'
             ),
             User(
+                id=18,
                 name='Tina',
                 instagram_username='tinacalamba',
                 followers=profile.from_username(bot.context, 'tinacalamba').followers,
@@ -157,6 +175,7 @@ class ConfigInstagram:
                           '/tina-foto-330-270-bbb23.png'
             ),
             User(
+                id=19,
                 name='Gabriel Santana',
                 instagram_username='gbielsantana',
                 followers=profile.from_username(bot.context, 'gbielsantana').followers,
@@ -165,6 +184,7 @@ class ConfigInstagram:
                           '/gabriel-santana-foto-330-270-bbb23.png'
             ),
             User(
+                id=20,
                 name='Amanda',
                 instagram_username='ameirelles',
                 followers=profile.from_username(bot.context, 'ameirelles').followers,
@@ -173,6 +193,7 @@ class ConfigInstagram:
                           '/amanda-foto-330-270-bbb23.png'
             ),
             User(
+                id=21,
                 name='Bruno',
                 instagram_username='brunornogueira',
                 followers=profile.from_username(bot.context, 'brunornogueira').followers,
@@ -181,6 +202,7 @@ class ConfigInstagram:
                           '/bruno-foto-330-270-bbb23.png'
             ),
             User(
+                id=22,
                 name='MC Guimê',
                 instagram_username='mcguime',
                 followers=profile.from_username(bot.context, 'mcguime').followers,

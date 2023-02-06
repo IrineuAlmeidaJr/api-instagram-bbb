@@ -13,11 +13,11 @@ def create_dataframe(current_date, brothers):
     dir_file = '../data/bbb_instagram.xlsx'
     if os.path.isfile(dir_file):
         df = pd.read_excel('../data/bbb_instagram.xlsx')
-        new_df = pd.DataFrame(list(map(lambda b: [b.Name, b.Followers], brothers)))
-        df[current_date] = new_df[1]
+        new_df = pd.DataFrame(list(map(lambda b: [b.Id, b.Name, b.Followers], brothers)))
+        df[current_date] = new_df[2]
     else:
-        df = pd.DataFrame(list(map(lambda b: [b.Name, b.Followers], brothers)))
-        df.columns = ['Nome', '2023-01-23']
+        df = pd.DataFrame(list(map(lambda b: [b.Id, b.Name, b.Followers], brothers)))
+        df.columns = ['Id', 'Nome', '2023-01-23']
 
     print(df)
     return df
@@ -53,11 +53,11 @@ def execute():
     pd.set_option('display.width', 1000)
 
     current_date = str(date.today())
-    # brothers = LoadData.load_data_file()
-    brothers = LoadData.load_data_intagram()
+    brothers = LoadData.load_data_file()
+    # brothers = LoadData.load_data_intagram()
     dataframe = create_dataframe(current_date, brothers)
     graphic_figure = create_graphic(brothers)
-    write_documents(current_date, brothers, dataframe, graphic_figure)
+    # write_documents(current_date, brothers, dataframe, graphic_figure)
 
 
 execute()

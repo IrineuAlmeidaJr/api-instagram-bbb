@@ -3,11 +3,17 @@ import numpy as np
 
 
 class User:
-    def __init__(self, name, instagram_username, followers, url_image):
+
+    def __init__(self, id, name, instagram_username, followers, url_image):
+        self.__id = id
         self.__name = name
         self.__instagram_username = instagram_username
         self.__followers = followers
         self.__url_image = url_image
+
+    @property
+    def Id(self):
+        return self.__id
 
     @property
     def Name(self):
@@ -26,26 +32,32 @@ class User:
         return self.__url_image
 
     def __str__(self):
-        return f'{self.Name},{self.Instagram_username},' \
+        return f'{self.Id}, {self.Name},{self.Instagram_username},' \
                f'{self.Followers},{self.Url_image}'
 
     def __repr__(self):
         return {
-            "name": self.__name,
-            "instagram_username": self.__instagram_username,
-            "followers": self.__followers,
-            "url_image": self.__url_image.rstrip()
+            "id": self.Id,
+            "name": self.Name,
+            "instagram_username": self.Instagram_username,
+            "followers": self.Followers,
+            "url_image": self.Url_image.rstrip()
         }
 
     @staticmethod
-    def get_all_brothers():
+    def get_all_brothers(in_game):
+        in_game = np.array(in_game)
         brothers = []
         with open(f'data/bbb_instagram.txt', "r") as file:
             for item in file:
                 if item.strip() != '':
                     brother = item.split(',')
-                    brother = User(brother[0], brother[1], int(brother[2]), brother[3])
+                    brother = User(int(brother[0]), brother[1], brother[2], int(brother[3]), brother[4])
                     brothers.append(brother)
+
+        brothers_in_game = [temp_brother for temp_brother in brothers if temp_brother.Id in in_game]
+        brothers_not_in_game = [temp_brother for temp_brother in brothers if temp_brother.Id not in in_game]
+        brothers = brothers_in_game + brothers_not_in_game
 
         brothers = [b.__repr__() for b in brothers]
 
@@ -61,13 +73,19 @@ class User:
     @staticmethod
     def get_follower_history(name):
         df = pd.read_excel('data/bbb_instagram.xlsx')
-        followers = df[df['Nome'] == name].values.tolist()[0][1:]
+        followers = df[df['Nome'] == name].values.tolist()[0][2:]
         column_names = df.keys().tolist()
 
         if len(followers) > 0:
             return {
-                'days': column_names[1:],
-                'followers': [int(follower / 1000) for follower in followers]
+                'text': {
+                    'days': column_names[2:],
+                    'followers': [int(follower) for follower in followers]
+                },
+                'chart': {
+                    'days': column_names[2:],
+                    'followers': [int(follower/1000) for follower in followers]
+                }
             }
         return {'days': [], 'followers': []}
 
@@ -77,7 +95,7 @@ class User:
         df_column_names = df.keys().to_numpy()
         url_brothers_image = pd.DataFrame(np.loadtxt('image/url_imagens_brothers.txt', dtype=str))
 
-        name_followers = df[[df_column_names[0], df_column_names[-1]]]
+        name_followers = df[[df_column_names[1], df_column_names[-1]]]
         name_followers['url_image'] = url_brothers_image
 
         name_followers = name_followers.sort_values(df_column_names[-1], ascending=False)
@@ -85,7 +103,7 @@ class User:
         user_local = []
         for index, row in name_followers.iterrows():
             user_local.append({
-                'name': row[df_column_names[0]],
+                'name': row['Nome'],
                 'followers': row[df_column_names[-1]],
                 'url_image': row['url_image']
             })
