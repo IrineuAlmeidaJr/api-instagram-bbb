@@ -1,8 +1,0 @@
-flask
-gunicorn
-pandas
-openpyxl
-numpy
-matplotlib
-seaborn
-instaloader
