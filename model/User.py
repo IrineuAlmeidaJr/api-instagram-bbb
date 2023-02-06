@@ -72,6 +72,7 @@ class User:
 
     @staticmethod
     def get_follower_history(name):
+        name = str(name).strip()
         df = pd.read_excel('data/bbb_instagram.xlsx')
         followers = df[df['Nome'] == name].values.tolist()[0][2:]
         column_names = df.keys().tolist()
