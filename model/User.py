@@ -45,7 +45,7 @@ class User:
         }
 
     @staticmethod
-    def get_all_brothers(in_game):
+    def __order_brothers(in_game):
         in_game = np.array(in_game)
         brothers = []
         with open(f'data/bbb_instagram.txt', "r") as file:
@@ -57,18 +57,31 @@ class User:
 
         brothers_in_game = [temp_brother for temp_brother in brothers if temp_brother.Id in in_game]
         brothers_not_in_game = [temp_brother for temp_brother in brothers if temp_brother.Id not in in_game]
-        brothers = brothers_in_game + brothers_not_in_game
+        return brothers_in_game + brothers_not_in_game
 
+    @staticmethod
+    def get_all_brothers(in_game):
+        brothers = User.__order_brothers(in_game)
         brothers = [b.__repr__() for b in brothers]
 
         return brothers
 
     @staticmethod
-    def get_followers_start():
+    def get_followers_start(in_game):
         # Index in the 'followers_before' variable are the same as in the 'dataset' variable.
         # -> Represents the following that 'brothers' had before entering the BBB
         dataset = pd.read_excel('data/bbb_instagram.xlsx')
-        return dataset['2023-01-13'].tolist()
+
+        brothers = User.__order_brothers(in_game)
+
+        ids_brothers = np.array([brother.Id for brother in brothers])
+
+        lista = []
+        df = dataset[['Id', '2023-01-13']]
+        for id_brother in ids_brothers:
+            lista.append(int(df[df['Id'] == id_brother]['2023-01-13'].values))
+
+        return lista
 
     @staticmethod
     def get_follower_history(name):
@@ -85,7 +98,7 @@ class User:
                 },
                 'chart': {
                     'days': column_names[2:],
-                    'followers': [int(follower/1000) for follower in followers]
+                    'followers': [int(follower / 1000) for follower in followers]
                 }
             }
         return {'days': [], 'followers': []}

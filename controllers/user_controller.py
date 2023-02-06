@@ -15,7 +15,7 @@ def get_all_brothers():
                               13, 14, 16, 17, 18, 19, 20, 21, 22]
     )
     brothers = User.get_all_brothers(status_brothers.In_Game)
-    followers_before = User.get_followers_start()
+    followers_before = User.get_followers_start(status_brothers.In_Game)
 
     return jsonify({
         'brothers': brothers,
