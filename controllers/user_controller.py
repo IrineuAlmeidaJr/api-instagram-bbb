@@ -8,7 +8,7 @@ from model.StatusBrothers import StatusBrothers
 def get_all_brothers():
     status_brothers = StatusBrothers(
         id_brother_leader=6,
-        id_brother_angel=16,
+        id_brother_angel=0,
         ids_brothers_monster=[],
         ids_brothers_wall=[4, 18, 19],
         ids_brothers_in_game=[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
