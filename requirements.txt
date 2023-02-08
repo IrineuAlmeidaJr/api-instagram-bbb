@@ -6,3 +6,5 @@ numpy
 matplotlib
 seaborn
 instaloader
+requests
+beautifulsoup4==4.11.2
