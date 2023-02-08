@@ -24,6 +24,10 @@ def get_all_brothers():
     })
 
 
+def get_compare_followers():
+    return jsonify(User.get_compare_followers())
+
+
 def get_follower_history_brother(name):
     return jsonify(User.get_follower_history(name))
 

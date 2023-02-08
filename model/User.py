@@ -123,3 +123,27 @@ class User:
             })
 
         return user_local
+
+    @staticmethod
+    def get_compare_followers():
+        df = pd.read_excel('data/bbb_instagram.xlsx')
+        url_brothers_image = np.loadtxt('image/url_imagens_brothers.txt', dtype=str)
+        brothers = []
+        columns_names = df.columns.tolist()
+
+        if len(df.columns) >= 4:
+            list_for_compare = df[[
+                columns_names[0],
+                columns_names[1],
+                columns_names[-2],
+                columns_names[-1]
+            ]]
+
+            for index, row in list_for_compare.iterrows():
+                brothers.append({
+                    'name': row[1],
+                    'url_image': url_brothers_image[index],
+                    'new_followers': row[-1] - row[-2]
+                })
+
+        return brothers
