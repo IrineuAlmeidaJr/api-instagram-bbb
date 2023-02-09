@@ -125,25 +125,37 @@ class User:
         return user_local
 
     @staticmethod
-    def get_compare_followers():
+    def get_compare_followers(in_game):
+        brothers = User.__order_brothers(in_game)
+
         df = pd.read_excel('data/bbb_instagram.xlsx')
-        url_brothers_image = np.loadtxt('image/url_imagens_brothers.txt', dtype=str)
-        brothers = []
         columns_names = df.columns.tolist()
 
+        today_followers = []
+
         if len(df.columns) >= 4:
-            list_for_compare = df[[
+            df = df[[
                 columns_names[0],
                 columns_names[1],
                 columns_names[-2],
                 columns_names[-1]
             ]]
 
-            for index, row in list_for_compare.iterrows():
-                brothers.append({
-                    'name': row[1],
-                    'url_image': url_brothers_image[index],
-                    'new_followers': row[-1] - row[-2]
+            for brother in brothers:
+                row = df[df['Id'] == brother.Id].values
+                today_followers.append({
+                    'id': brother.Id,
+                    'name': row[0][1],
+                    'followers': brother.Followers,
+                    'instagram_username': brother.Instagram_username,
+                    'url_image': brother.Url_image.rstrip(),
+                    'new_followers': row[0][-1] - row[0][-2]
                 })
 
-        return brothers
+            today_followers.sort(key=lambda x: x['new_followers'], reverse=True)
+
+            # print(today_followers)
+            # brothers = [b.__repr__() for b in brothers]
+            return today_followers
+
+        return ""

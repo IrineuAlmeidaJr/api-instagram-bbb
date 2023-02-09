@@ -4,16 +4,17 @@ from flask import jsonify, request
 from model.User import User
 from model.StatusBrothers import StatusBrothers
 
+status_brothers = StatusBrothers(
+    id_brother_leader=6,
+    id_brother_angel=0,
+    ids_brothers_monster=[],
+    ids_brothers_wall=[],
+    ids_brothers_in_game=[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
+                          13, 14, 16, 17, 19, 20, 21, 22]
+)
+
 
 def get_all_brothers():
-    status_brothers = StatusBrothers(
-        id_brother_leader=6,
-        id_brother_angel=0,
-        ids_brothers_monster=[],
-        ids_brothers_wall=[],
-        ids_brothers_in_game=[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
-                              13, 14, 16, 17, 19, 20, 21, 22]
-    )
     brothers = User.get_all_brothers(status_brothers.In_Game)
     followers_before = User.get_followers_start(status_brothers.In_Game)
 
@@ -25,7 +26,14 @@ def get_all_brothers():
 
 
 def get_compare_followers():
-    return jsonify(User.get_compare_followers())
+    brothers = User.get_compare_followers(status_brothers.In_Game)
+    followers_before = User.get_followers_start(status_brothers.In_Game)
+    return jsonify({
+        'brothers': brothers,
+        'followers_before': followers_before,
+        'status_brothers': status_brothers.__repr__()
+    })
+    # return jsonify()
 
 
 def get_follower_history_brother(name):

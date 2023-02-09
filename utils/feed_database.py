@@ -53,11 +53,11 @@ def execute():
     pd.set_option('display.width', 1000)
 
     current_date = str(date.today())
-    brothers = LoadData.load_data_file()
-    # brothers = LoadData.load_data_intagram()
+    # brothers = LoadData.load_data_file()
+    brothers = LoadData.load_data_intagram()
     dataframe = create_dataframe(current_date, brothers)
     graphic_figure = create_graphic(brothers)
-    # write_documents(current_date, brothers, dataframe, graphic_figure)
+    write_documents(current_date, brothers, dataframe, graphic_figure)
 
 
 
