@@ -1,12 +1,12 @@
 class StatusBrothers:
 
-    def __init__(self, id_brother_leader, id_brother_angel, ids_brothers_monster,
-                 ids_brothers_wall, ids_brothers_in_game):
-        self.__leader = id_brother_leader
-        self.__angel = id_brother_angel
-        self.__monster = ids_brothers_monster
-        self.__wall = ids_brothers_wall
-        self.__in_game = ids_brothers_in_game
+    def __init__(self):
+        self.__leader = 6
+        self.__angel = 20
+        self.__monster = [4, 10]
+        self.__wall = [21]
+        self.__in_game = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
+                        13, 14, 16, 17, 19, 20, 21, 22]
 
     @property
     def Leader(self):
