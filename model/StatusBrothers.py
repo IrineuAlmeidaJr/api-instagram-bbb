@@ -2,10 +2,10 @@ class StatusBrothers:
 
     def __init__(self):
         self.__leader = 6
-        self.__angel = 20
-        self.__monster = [4, 10]
-        self.__wall = [21]
-        self.__in_game = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
+        self.__angel = 0
+        self.__monster = []
+        self.__wall = []
+        self.__in_game = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
                         13, 14, 16, 17, 19, 20, 21, 22]
 
     @property
