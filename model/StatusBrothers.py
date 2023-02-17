@@ -1,7 +1,7 @@
 class StatusBrothers:
 
     def __init__(self):
-        self.__leader = 6
+        self.__leader = 0
         self.__angel = 0
         self.__monster = []
         self.__wall = []
