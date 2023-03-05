@@ -2,8 +2,8 @@ class StatusBrothers:
 
     def __init__(self):
         self.__leader = 7
-        self.__angel = 0
-        self.__monster = []
+        self.__angel = 22
+        self.__monster = [17, 19]
         self.__wall = []
         self.__in_game = [3, 4, 5, 7, 8, 9, 10, 11, 12, 14, 17, 19, 20, 22]
 
