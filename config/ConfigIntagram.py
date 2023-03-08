@@ -24,8 +24,8 @@ class ConfigInstagram:
             User(
                 id=2,
                 name='Paula',
-                instagram_username='paulafreitasr_',
-                followers=profile.from_username(bot.context, 'paulafreitasr_').followers,
+                instagram_username='_paulafreitasr_',
+                followers=profile.from_username(bot.context, '_paulafreitasr_').followers,
                 url_image='https://s2.glbimg.com/nVOp1nrNMAlzW57bfHFdon5L1qg=/i.s3.glbimg.com/v1'
                           '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/s/r/AstvO8T0OvZCRN7XE7cA'
                           '/paula-foto-330-270-bbb23.png'
