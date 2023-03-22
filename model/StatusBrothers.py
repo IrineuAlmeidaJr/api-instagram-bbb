@@ -5,7 +5,7 @@ class StatusBrothers:
         self.__angel = 0
         self.__monster = []
         self.__wall = []
-        self.__in_game = [3, 4, 5, 7, 9, 10, 12, 17, 19, 20]
+        self.__in_game = [3, 4, 5, 9, 10, 12, 17, 19, 20]
 
     @property
     def Leader(self):
