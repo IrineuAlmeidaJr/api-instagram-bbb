@@ -4,7 +4,7 @@ class StatusBrothers:
         self.__leader = 9
         self.__angel = 0
         self.__monster = []
-        self.__wall = []
+        self.__wall = [5, 7, 12]
         self.__in_game = [3, 4, 5, 8, 9, 10, 12, 13, 17, 20]
 
     @property
