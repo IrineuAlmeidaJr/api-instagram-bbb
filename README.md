@@ -1,5 +1,6 @@
 <h1 align="center">Análise Perfil Instagram - BBB</h1>
-<h4 align="justify">Projeto visa construir uma base de dados extraindo dados do Instagram de perfis dos participante do BBB 23, mas, nada impede que seja feito com outros perfis de usuários. O código será automatizado para todos os dias buscar dados e gerar um arquivo texto, gráfico e xlsx. Ao fim, pretende disponibilizar via Api Flask rotas para trazer o números de todos inscritos e bem como trazer o histório de inscrito geral e pessoal. </h4>
+<h4 align="justify">Projeto visa construir uma base de dados extraindo dados do Instagram de perfis dos participante do BBB 23. O código será automatizado para todos os dias buscar dados e gerar um arquivo texto, gráfico e xlsx. </h4>
+<h4> É disponibilizado via REST Api, desenvolvido com Flask com rotas para trazer o números de todos inscritos e bem como trazer o histório de inscrito geral e pessoal. </h4>
 
 ## 🖥️ Tecnologías Utilizadas:
 
