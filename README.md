@@ -8,6 +8,24 @@
 - Pandas </br>
 - Instaloader </br>
 
+## 📌 Rotas da API:
+ API hospedada no [Render](http://render.com/) gratuitamente, por essa razão, a primeira vez para acessar a API demorá cerca de 30s a 60s. 
+ <p>A base de dados não está sendo mais atualizada diariamente devido o fim do BBB</p>
+ <p> Em geral a a API retorna dados dos brothers como nome, imagem, username do instagram e quantidade de seguidores, o status se está ainda no programa, quem é lider, mostro e paredão </p>
+
+    - Retorna dados de todos o participantes
+    https://instabrothers-bbb-api.onrender.com/brothers
+
+    - Retornar dados dos participantes ordenado por quem está ganhando mais seguidores
+    https://instabrothers-bbb-api.onrender.com/brother/compare-followers
+
+    - Retorna detalhado por data quantos seguidores possuia o participante passado por parâmetro
+    https://instabrothers-bbb-api.onrender.com/brother/{NomeParticipante}
+    
+    - Retorna ranking dos participantes que possuem mais seguidores
+    https://instabrothers-bbb-api.onrender.com/ranking
+
+
 ## :hammer: Funcionalidades do projeto
 
 - `Gerar DataFrame`: busca perfil dos participantes do BBB 23
