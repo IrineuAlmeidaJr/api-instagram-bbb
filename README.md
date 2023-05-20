@@ -12,6 +12,7 @@
 - Flask </br>
 - Pandas </br>
 - Instaloader </br>
+- BeautifulSoup </br>
 
 ## 📌 Rotas da API:
  API hospedada no [Render](http://render.com/) gratuitamente, por essa razão, a primeira vez para acessar a API demorá cerca de 30s a 60s. 
@@ -29,6 +30,9 @@
     
     - Retorna ranking dos participantes que possuem mais seguidores
     https://instabrothers-bbb-api.onrender.com/ranking
+    
+    - Retorna noticias relacionado ao BBB com base no site NoticiasdaTv do Uol
+    https://instabrothers-bbb-api.onrender.com/news
 
 
 ## :hammer: Funcionalidades do projeto
