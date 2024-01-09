@@ -27,6 +27,10 @@ class User:
     def Followers(self):
         return self.__followers
 
+    @Followers.setter
+    def Followers(self, value):
+        self.__followers = value
+
     @property
     def Url_image(self):
         return self.__url_image

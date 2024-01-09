@@ -17,7 +17,7 @@ def create_dataframe(current_date, brothers):
         df[current_date] = new_df[2]
     else:
         df = pd.DataFrame(list(map(lambda b: [b.Id, b.Name, b.Followers], brothers)))
-        df.columns = ['Id', 'Nome', '2023-01-23']
+        df.columns = ['Id', 'Nome', current_date]
 
     print(df)
     return df

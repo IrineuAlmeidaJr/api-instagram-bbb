@@ -3,211 +3,221 @@ from model.User import User
 
 
 class ConfigInstagram:
-    username = 'irineu.almeida.jr@icloud.com'
-    bot = instaloader.Instaloader()
-    # bot.interactive_login(username)
-    profile = instaloader.Profile
 
-    @staticmethod
-    def load():
-        bot = instaloader.Instaloader()
-        profile = instaloader.Profile
-        return [User(
+    def __init__(self):
+        self.__username = 'irineu.almeida.jr'
+        self.__password = 'colocar_senha'
+        self.__bot = instaloader.Instaloader()
+        # self.__bot.login(self.__username, self.__password)
+        self.__profile = instaloader.Profile
+
+    def load(self):
+        users = [User(
             id=1,
-            name='Gabriel',
-            instagram_username='vulgofop',
-            followers=profile.from_username(bot.context, 'vulgofop').followers,
-            url_image='https://s2.glbimg.com/runqsEy54iPoXMQ8qkLRe7WQSPY=/i.s3.glbimg.com/v1'
-                      '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/R/i/ar31rfRe6EGls4fhYOBg'
-                      '/gabriel-foto-330-270-bbb23.png'
+            name='Alane',
+            instagram_username='alanediax',
+            followers=0,
+            url_image='https://s2.glbimg.com/1qmlbxsM-qVrrWQk8eLu7YI0GUQ=/i.s3.glbimg.com/v1'
+                      '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/T/H/3I6H0BTMqO5tUF8G5mNw'
+                      '/cabecograma-330x270-0015-17-alanis.png'
         ),
             User(
                 id=2,
-                name='Paula',
-                instagram_username='_paulafreitasr_',
-                followers=profile.from_username(bot.context, 'paulafreitas').followers,
-                url_image='https://s2.glbimg.com/nVOp1nrNMAlzW57bfHFdon5L1qg=/i.s3.glbimg.com/v1'
-                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/s/r/AstvO8T0OvZCRN7XE7cA'
-                          '/paula-foto-330-270-bbb23.png'
+                name='Beatriz',
+                instagram_username='beatrizreisbrasil',
+                followers=0,
+                url_image='https://s2.glbimg.com/qloI2ImVBE6zQNTmfz6rr7NubYM=/i.s3.glbimg.com/v1'
+                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/0/a/yih0KWQBmo4zf0SOOA1A'
+                          '/cabecograma-330x270-0027-33-beatrizl.png'
             ),
             User(
                 id=3,
-                name='Aline Wirley',
-                instagram_username='alinewirley',
-                followers=profile.from_username(bot.context, 'alinewirley').followers,
-                url_image='https://s2.glbimg.com/N_hBFjgkyF7j7i27H8lKm8nFv34=/i.s3.glbimg.com/v1'
-                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/Z/p/sphPCLSBmIxr3u3WFuCw'
-                          '/aline-nova.png'
+                name='Deniziane',
+                instagram_username='anny_ferreira10',
+                followers=0,
+                url_image='https://s2.glbimg.com/FKuXDmRs6r9l0kp-AM75cn6S7Kc=/i.s3.glbimg.com/v1'
+                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/j/i/UQP8bgQCyvdOBPzo98YQ'
+                          '/cabecograma-330x270-0030-8-anne.png'
             ),
-            User(
+            User(  ##---- NÃO FUNCIONA
                 id=4,
-                name='Cezar Black',
-                instagram_username='cezar.black',
-                followers=profile.from_username(bot.context, 'cezar.black').followers,
-                url_image='https://s2.glbimg.com/HNtVguV5kfdFMyGdB-sAGcFDXa0=/i.s3.glbimg.com/v1'
-                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/q/8/isGwrhTseVHYUkKFfvpA'
-                          '/cezar-foto-330-270-bbb23.png'
+                name='Fernanda',
+                instagram_username='nandabande',
+                followers=0,
+                url_image='https://s2.glbimg.com/M_qF_zCLSDXn5VwJjeYndP0ylVc=/i.s3.glbimg.com/v1'
+                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/a/G/3OpFqSRmm2kOeRkcjD5w'
+                          '/cabecograma-330x270-0007-10-fernanda.png'
             ),
             User(
                 id=5,
-                name='Bruna Griphao',
-                instagram_username='brunagriphao',
-                followers=profile.from_username(bot.context, 'brunagriphao').followers,
-                url_image='https://s2.glbimg.com/TCP9ZDJu95vsCDXaaDXfJl_nbMw=/i.s3.glbimg.com/v1'
-                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/x/Q/booSm0TKGKCbOAp2hnSg'
-                          '/bruna-griphao-foto-330-270-bbb23.png'
+                name='Giovanna',
+                instagram_username='giovannaleticiamarinho',
+                followers=0,
+                url_image='hhttps://s2.glbimg.com/bPpKpAk16RUL0Vr7qO8B5uxApls=/i.s3.glbimg.com/v1'
+                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/U/q/nLQhAbQfS5dDZakZH3Zg'
+                          '/cabecograma-330x270-0028-32-giovanna-pitel.png'
             ),
             User(
                 id=6,
-                name='Gustavo',
-                instagram_username='gustavo_benedetii',
-                followers=profile.from_username(bot.context, 'gustavo_benedetii').followers,
-                url_image='https://s2.glbimg.com/hb1e_t0vJU09PCDH2u4_TuxapYY=/i.s3.glbimg.com/v1'
-                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/p/M/FaP5NrR6it8n3nSQlD4Q'
-                          '/gustavo-foto-330-270-bbb23.png'
+                name='Leidy Elin',
+                instagram_username='leidyelin',
+                followers=0,
+                url_image='https://s2.glbimg.com/SjXsFdI2Nuw9Uh40cr7WCNVXtNY=/i.s3.glbimg.com/v1'
+                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/1/I/BkC6n7QNW3QdyYVxswbA'
+                          '/cabecograma-330x270-0008-1-leidi.png'
             ),
             User(
                 id=7,
-                name='Fred',
-                instagram_username='fred',
-                followers=profile.from_username(bot.context, 'fred').followers,
-                url_image='https://s2.glbimg.com/eM0NqkWFwpdDzFw2rQuf0ScXP8M=/i.s3.glbimg.com/v1'
-                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/f/J/bT3Vv0QZWAn5f5UepdqQ'
-                          '/fred-foto-330-270-bbb23.png'
+                name='Lucas Luigi',
+                instagram_username='lucas.luigi',
+                followers=0,
+                url_image='https://s2.glbimg.com/bxMjqvBNUDccgxHsKkn3QqNiKbE=/i.s3.glbimg.com/v1'
+                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/L/i/Z3Q2AQSi6VyrElQorYig'
+                          '/cabecograma-330x270-0006-11-luigi.png'
             ),
             User(
                 id=8,
-                name='Larissa',
-                instagram_username='larisantosbe',
-                followers=profile.from_username(bot.context, 'larisantosbe').followers,
-                url_image='https://s2.glbimg.com/-caXoQsbWDAoKTooZMVTVncRGSs=/i.s3.glbimg.com/v1'
-                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/O/A/MaQNodRIiGx8A8UmBdsQ'
-                          '/larissa-foto-330-270-bbb23.png'
+                name='Lucas Pizane',
+                instagram_username='lucaspizane',
+                followers=0,
+                url_image='https://s2.glbimg.com/2MWtpSdfIitmGLjhiVarVc7lf0k=/i.s3.glbimg.com/v1'
+                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/k/H/LezltFSGmwNE1BgQJWZw'
+                          '/cabecograma-330x270-0031-7-pizzani.png'
             ),
             User(
                 id=9,
-                name='Ricardo',
-                instagram_username='rickcamargo',
-                followers=profile.from_username(bot.context, 'rickcamargo').followers,
-                url_image='https://s2.glbimg.com/lm4D5KvY-hdaZy1uLyb5vkJYJ3o=/i.s3.glbimg.com/v1'
-                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/l/Z/I3L2CyQcGKSLBdxcYz5g'
-                          '/ricardo-foto-330-270-bbb23.png'
+                name='Marcus',
+                instagram_username='marcus.vib',
+                followers=0,
+                url_image='https://s2.glbimg.com/jjgu-2EsQBvjABQnLFiegmShuWI=/i.s3.glbimg.com/v1'
+                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/w/D/aNSiS7QJAvRb5uKFGzbg'
+                          '/cabecograma-330x270-0017-15-marcos.png'
             ),
             User(
                 id=10,
-                name='Domitila Barros',
-                instagram_username='domitila_barros',
-                followers=profile.from_username(bot.context, 'domitila_barros').followers,
-                url_image='https://s2.glbimg.com/bvcrAlxJWGrroFKlgd08dXTrMUU=/i.s3.glbimg.com/v1'
-                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/D/B/1eIYhdRv2ymWBzulzKmw'
-                          '/domitila-barros-foto-330-270-bbb23.png'
+                name='Matteus',
+                instagram_username='bahmatteus',
+                followers=0,
+                url_image='https://s2.glbimg.com/FM_iOFbZx7h2jaPNgKAU0ZoKFuk=/i.s3.glbimg.com/v1'
+                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/6/p/aBB99gTNGIUs1NW3tuhA'
+                          '/cabecograma-330x270-0009-28-matteus.png'
             ),
             User(
                 id=11,
-                name='Antonio ‘Cara de Sapato’ Jr',
-                instagram_username='caradesapato',
-                followers=profile.from_username(bot.context, 'caradesapato').followers,
-                url_image='https://s2.glbimg.com/nBl5zuHYzAupafMVvHicEkle1gk=/i.s3.glbimg.com/v1'
-                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/Z/A/oImXJNRcADBfVcPTQsdw'
-                          '/cara-de-sapato-foto-330-270-bbb23.png'
+                name='Maycon',
+                instagram_username='mayconcosmer',
+                followers=0,
+                url_image='https://s2.glbimg.com/Jf-7vMYMSf-PkoBf7VPPaAXlHGI=/i.s3.glbimg.com/v1'
+                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/n/9/y6AZBQQreIam7UA6xkWw'
+                          '/cabecograma-330x270-0014-18-maycon.png'
             ),
             User(
                 id=12,
-                name='Sarah Aline',
-                instagram_username='saa_aline',
-                followers=profile.from_username(bot.context, 'saa_aline').followers,
-                url_image='https://s2.glbimg.com/yCts0mvxcUtLOKKL3Q5veQr83Vw=/i.s3.glbimg.com/v1'
-                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/7/a/onW6EUSfylTCqjwjYZuA'
-                          '/sarah-aline-foto-330-270-bbb23.png'
+                name='Mc Bin Laden',
+                instagram_username='mcbinladen',
+                followers=0,
+                url_image='https://s2.glbimg.com/LjAhPazcpK0E08GxYrcsNTR2arE=/i.s3.glbimg.com/v1'
+                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/4/9/v6CZHuTc2QBfBWqPX9Ug'
+                          '/cabecograma-330x270-0022-3-jefferson.png'
             ),
             User(
                 id=13,
-                name='Fred Nicácio',
-                instagram_username='frednicacio',
-                followers=profile.from_username(bot.context, 'frednicacio').followers,
-                url_image='https://s2.glbimg.com/Oq-kfI9lD9Qd1pn75esr4SlJdEw=/i.s3.glbimg.com/v1'
-                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/s/9/Mdb40BTGAJsJ9fuoRvrg'
-                          '/nicacio-foto-330-270-bbb23.png'
+                name='Nizam',
+                instagram_username='aboujokh',
+                followers=0,
+                url_image='https://s2.glbimg.com/RDhoHlG6-Hv9gnTBGFcl2201JUE=/i.s3.glbimg.com/v1'
+                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/K/M/dPD3WLQoeVM5AXjhjBHQ'
+                          '/cabecograma-330x270-0032-6-nissam.png'
             ),
             User(
                 id=14,
-                name='Key Alves',
-                instagram_username='keyalves',
-                followers=profile.from_username(bot.context, 'keyalves').followers,
-                url_image='https://s2.glbimg.com/zTwsn2Og1mYqvm7_iGAkOaa6HB0=/i.s3.glbimg.com/v1'
-                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/s/q/MBFLD6RFaAjPs0vK1TBQ'
-                          '/key-alves-foto-330-270-bbb23.png'
+                name='Rodriguinho',
+                instagram_username='rodriguinho',
+                followers=0,
+                url_image='https://s2.glbimg.com/milgdMnod_FJyaEHCBQrL36rPKc=/i.s3.glbimg.com/v1'
+                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/f/r/Jggwk1SSaFXJAOk0X5AA'
+                          '/cabecograma-330x270-0034-4-rodrigo.png'
             ),
             User(
                 id=15,
-                name='Marília',
-                instagram_username='mariliamiranda',
-                followers=profile.from_username(bot.context, 'mariliamiranda').followers,
-                url_image='https://s2.glbimg.com/jhMhly4KC7xuGqsHFR7tcA00en8=/i.s3.glbimg.com/v1'
-                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/D/Z/g3UMGYT3WHoTDoE6SOqQ'
-                          '/marilia-foto-330-270-bbb23.png'
+                name='Vanessa Lopes',
+                instagram_username='vanessalopesr_',
+                followers=0,
+                url_image='https://s2.glbimg.com/mVEMnAox73wHySK9Zh-Eu-req5Q=/i.s3.glbimg.com/v1'
+                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/U/o/bXTZLSTtixi5r6e4pIYw'
+                          '/cabecograma-330x270-0004-14-vanessa.png'
             ),
             User(
                 id=16,
-                name='Cristian',
-                instagram_username='cristianvanelli',
-                followers=profile.from_username(bot.context, 'cristianvanelli').followers,
-                url_image='https://s2.glbimg.com/UZGxV710OZU24-fVb1lrzYN2_aU=/i.s3.glbimg.com/v1'
-                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/1/Y/ltP6UASu2o2tJwzeOW1A'
-                          '/cristian-foto-330-270-bbb23.png'
+                name='Vinicius Rodrigues',
+                instagram_username='viniciusbellator.rodrigues',
+                followers=0,
+                url_image='https://s2.glbimg.com/GwqemLLWNI29hZ6bMwosuYvEQ_0=/i.s3.glbimg.com/v1'
+                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/T/y/vSL5KkQAapuCcyHBotTA'
+                          '/cabecograma-330x270-0003-13-vinicius.png'
             ),
             User(
                 id=17,
-                name='Marvvila',
-                instagram_username='marvvila',
-                followers=profile.from_username(bot.context, 'marvvila').followers,
-                url_image='https://s2.glbimg.com/9JyU3AWnqM35PYDaDJoL9VWEJl0=/i.s3.glbimg.com/v1'
-                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/A/b/llpQ1ASpKpNyl91amBiw'
-                          '/marvvila-foto-330-270-bbb23.png'
+                name='Wanessa Camargo',
+                instagram_username='wanessa',
+                followers=0,
+                url_image='https://s2.glbimg.com/3Iqta5qDjRpYO7q3amYfcAY2N0g=/i.s3.glbimg.com/v1'
+                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/j/s/lGYei7R0uDnTRdJzIVxA'
+                          '/cabecograma-330x270-0005-12-wanessa-camargo.png'
             ),
             User(
                 id=18,
-                name='Tina',
-                instagram_username='tinacalamba',
-                followers=profile.from_username(bot.context, 'tinacalamba').followers,
-                url_image='https://s2.glbimg.com/_xqu-RbYnhd_RlB-ityU-GghD7Q=/i.s3.glbimg.com/v1'
-                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/E/a/NToZOxRaKdpWOWPJq5AQ'
-                          '/tina-foto-330-270-bbb23.png'
+                name='Yasmin Brunet',
+                instagram_username='yasminbrunet',
+                followers=0,
+                url_image='https://s2.glbimg.com/vQXTj5pEJpdsT5leoENQ8WbNXrk=/i.s3.glbimg.com/v1'
+                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/T/i/YF72BOQO2QXGWky3avTA'
+                          '/cabecograma-330x270-0018-2-yasmin.png'
             ),
-            User(
-                id=19,
-                name='Gabriel Santana',
-                instagram_username='gbielsantana',
-                followers=profile.from_username(bot.context, 'gbielsantana').followers,
-                url_image='https://s2.glbimg.com/hnfJZ0wgKyySKyfXqlLX7CwZ7Ug=/i.s3.glbimg.com/v1'
-                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/x/p/esEdQlQPmY5U1C2KAGmQ'
-                          '/gabriel-santana-foto-330-270-bbb23.png'
-            ),
-            User(
-                id=20,
-                name='Amanda',
-                instagram_username='ameirelles',
-                followers=profile.from_username(bot.context, 'ameirelles').followers,
-                url_image='https://s2.glbimg.com/A40VzPy5Fs8lVKRYSR5m8QDo9Cs=/i.s3.glbimg.com/v1'
-                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/l/1/XBiigWR4iH4tA4DoSDnA'
-                          '/amanda-foto-330-270-bbb23.png'
-            ),
-            User(
-                id=21,
-                name='Bruno',
-                instagram_username='brunornogueira',
-                followers=profile.from_username(bot.context, 'brunornogueira').followers,
-                url_image='https://s2.glbimg.com/F8GthYiW4DsHxAFe9bVvsz1OGfA=/i.s3.glbimg.com/v1'
-                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/w/i/H84f93Qg6mQHwlz3IZ4A'
-                          '/bruno-foto-330-270-bbb23.png'
-            ),
-            User(
-                id=22,
-                name='MC Guimê',
-                instagram_username='mcguime',
-                followers=profile.from_username(bot.context, 'mcguime').followers,
-                url_image='https://s2.glbimg.com/_d7OBvTEilzCgRAyQW8rTA3JyP4=/i.s3.glbimg.com/v1'
-                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/j/w/07Dl8YRKKoyboVMwXrJw/mc'
-                          '-guime-foto-330-270-bbb23.png'
-            ),
+            # User(
+            #     id=19,
+            #     name='Gabriel Santana',
+            #     instagram_username='gbielsantana',
+            #     followers=profile.from_username(bot.context, 'gbielsantana').followers,
+            #     url_image='https://s2.glbimg.com/hnfJZ0wgKyySKyfXqlLX7CwZ7Ug=/i.s3.glbimg.com/v1'
+            #               '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/x/p/esEdQlQPmY5U1C2KAGmQ'
+            #               '/gabriel-santana-foto-330-270-bbb23.png'
+            # ),
+            # User(
+            #     id=20,
+            #     name='Amanda',
+            #     instagram_username='ameirelles',
+            #     followers=profile.from_username(bot.context, 'ameirelles').followers,
+            #     url_image='https://s2.glbimg.com/A40VzPy5Fs8lVKRYSR5m8QDo9Cs=/i.s3.glbimg.com/v1'
+            #               '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/l/1/XBiigWR4iH4tA4DoSDnA'
+            #               '/amanda-foto-330-270-bbb23.png'
+            # ),
+            # User(
+            #     id=21,
+            #     name='Bruno',
+            #     instagram_username='brunornogueira',
+            #     followers=profile.from_username(bot.context, 'brunornogueira').followers,
+            #     url_image='https://s2.glbimg.com/F8GthYiW4DsHxAFe9bVvsz1OGfA=/i.s3.glbimg.com/v1'
+            #               '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/w/i/H84f93Qg6mQHwlz3IZ4A'
+            #               '/bruno-foto-330-270-bbb23.png'
+            # ),
+            # User(
+            #     id=22,
+            #     name='MC Guimê',
+            #     instagram_username='mcguime',
+            #     followers=profile.from_username(bot.context, 'mcguime').followers,
+            #     url_image='https://s2.glbimg.com/_d7OBvTEilzCgRAyQW8rTA3JyP4=/i.s3.glbimg.com/v1'
+            #               '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/j/w/07Dl8YRKKoyboVMwXrJw/mc'
+            #               '-guime-foto-330-270-bbb23.png'
+            # ),
         ]
+
+        for user in users:
+            try:
+                user.Followers = self.__profile.from_username(self.__bot.context, user.Instagram_username).followers
+                print(f'{user.Name} = {user.Followers}')
+            except Exception as e:
+                print(f'Erro - username "{user.Name}" __ {e}')
+                user.followers = 0
+
+        return users
