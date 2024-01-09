@@ -19,7 +19,7 @@ class News:
     def get_news():
         news = []
         try:
-            url = "https://noticiasdatv.uol.com.br/bbb/bbb-23"
+            url = "https://noticiasdatv.uol.com.br/bbb/bbb-24"
             response = requests.get(url)
             soup = BeautifulSoup(response.content, "html.parser")
 
