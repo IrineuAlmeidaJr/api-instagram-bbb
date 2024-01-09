@@ -16,8 +16,8 @@ def create_dataframe(current_date, brothers):
         new_df = pd.DataFrame(list(map(lambda b: [b.Id, b.Name, b.Followers], brothers)))
         df[current_date] = new_df[2]
     else:
-        df = pd.DataFrame(list(map(lambda b: [b.Id, b.Name, b.Followers], brothers)))
-        df.columns = ['Id', 'Nome', current_date]
+        df = pd.DataFrame(list(map(lambda b: [b.Id, b.Name.strip(), b.Followers], brothers)))
+        df.columns = ['Id', 'Nome', '2024-01-08']
 
     print(df)
     return df
@@ -42,10 +42,10 @@ def write_documents(current_date, brothers, dataframe, graphic_figure):
     graphic_figure.savefig(f'../data/bbb_instagram.png')
     with open(f'../data/bbb_instagram.txt', "w") as file:
         for item in brothers:
-            file.write(f'{item}\n')
+            file.write(f'{item.Id},{item.Name},{item.Instagram_username},{item.Followers},{item.Url_image}')
     with open(f'../backup/bbb_instagram_{current_date}.txt', "w") as file:
         for item in brothers:
-            file.write(f'{item}\n')
+            file.write(f'{item.Id},{item.Name},{item.Instagram_username},{item.Followers},{item.Url_image}')
 
 
 def execute():
@@ -53,8 +53,8 @@ def execute():
     pd.set_option('display.width', 1000)
 
     current_date = str(date.today())
-    # brothers = LoadData.load_data_file()
-    brothers = LoadData.load_data_intagram()
+    brothers = LoadData.load_data_file()
+    # brothers = LoadData.load_data_intagram()
     dataframe = create_dataframe(current_date, brothers)
     graphic_figure = create_graphic(brothers)
     write_documents(current_date, brothers, dataframe, graphic_figure)

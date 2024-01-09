@@ -174,15 +174,15 @@ class ConfigInstagram:
                           '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/T/i/YF72BOQO2QXGWky3avTA'
                           '/cabecograma-330x270-0018-2-yasmin.png'
             ),
-            # User(
-            #     id=19,
-            #     name='Gabriel Santana',
-            #     instagram_username='gbielsantana',
-            #     followers=profile.from_username(bot.context, 'gbielsantana').followers,
-            #     url_image='https://s2.glbimg.com/hnfJZ0wgKyySKyfXqlLX7CwZ7Ug=/i.s3.glbimg.com/v1'
-            #               '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/x/p/esEdQlQPmY5U1C2KAGmQ'
-            #               '/gabriel-santana-foto-330-270-bbb23.png'
-            # ),
+            User(
+                id=19,
+                name='Gabriel Santana',
+                instagram_username='gbielsantana',
+                followers=profile.from_username(bot.context, 'gbielsantana').followers,
+                url_image='https://s2.glbimg.com/hnfJZ0wgKyySKyfXqlLX7CwZ7Ug=/i.s3.glbimg.com/v1'
+                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/x/p/esEdQlQPmY5U1C2KAGmQ'
+                          '/gabriel-santana-foto-330-270-bbb23.png'
+            ),
             # User(
             #     id=20,
             #     name='Amanda',

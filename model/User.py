@@ -114,8 +114,8 @@ class User:
                     }
                 }
             return {'days': [], 'followers': []}
-        except Exception:
-            print("Exception in User on 'follower_history'")
+        except Exception as e:
+            print(f"Exception in User on 'follower_history' - {e}")
             return ""
 
     @staticmethod
