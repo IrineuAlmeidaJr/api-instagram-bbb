@@ -50,7 +50,7 @@ class ConfigInstagram:
             ),
             User(
                 id=5,
-                name='Giovanna',
+                name='Giovanna Pitel',
                 instagram_username='giovannaleticiamarinho',
                 followers=0,
                 url_image='hhttps://s2.glbimg.com/bPpKpAk16RUL0Vr7qO8B5uxApls=/i.s3.glbimg.com/v1'
@@ -150,7 +150,7 @@ class ConfigInstagram:
             User(
                 id=16,
                 name='Vinicius Rodrigues',
-                instagram_username='viniciusbellator.rodrigues',
+                instagram_username='vinirodriguesfc',
                 followers=0,
                 url_image='https://s2.glbimg.com/GwqemLLWNI29hZ6bMwosuYvEQ_0=/i.s3.glbimg.com/v1'
                           '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/T/y/vSL5KkQAapuCcyHBotTA'
@@ -176,40 +176,76 @@ class ConfigInstagram:
             ),
             User(
                 id=19,
-                name='Gabriel Santana',
-                instagram_username='gbielsantana',
-                followers=profile.from_username(bot.context, 'gbielsantana').followers,
-                url_image='https://s2.glbimg.com/hnfJZ0wgKyySKyfXqlLX7CwZ7Ug=/i.s3.glbimg.com/v1'
-                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/x/p/esEdQlQPmY5U1C2KAGmQ'
-                          '/gabriel-santana-foto-330-270-bbb23.png'
+                name='Davi',
+                instagram_username='daviooficialll',
+                followers=0,
+                url_image='https://s2.glbimg.com/khSP7b4ZDwfkQ3ir5u4PibcHSxA=/i.s3.glbimg.com/v1'
+                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/v/I/aqWLmZToOvXaAK8rpgVw'
+                          '/cabecograma-330x270-davi.png'
             ),
-            # User(
-            #     id=20,
-            #     name='Amanda',
-            #     instagram_username='ameirelles',
-            #     followers=profile.from_username(bot.context, 'ameirelles').followers,
-            #     url_image='https://s2.glbimg.com/A40VzPy5Fs8lVKRYSR5m8QDo9Cs=/i.s3.glbimg.com/v1'
-            #               '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/l/1/XBiigWR4iH4tA4DoSDnA'
-            #               '/amanda-foto-330-270-bbb23.png'
-            # ),
-            # User(
-            #     id=21,
-            #     name='Bruno',
-            #     instagram_username='brunornogueira',
-            #     followers=profile.from_username(bot.context, 'brunornogueira').followers,
-            #     url_image='https://s2.glbimg.com/F8GthYiW4DsHxAFe9bVvsz1OGfA=/i.s3.glbimg.com/v1'
-            #               '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/w/i/H84f93Qg6mQHwlz3IZ4A'
-            #               '/bruno-foto-330-270-bbb23.png'
-            # ),
-            # User(
-            #     id=22,
-            #     name='MC Guimê',
-            #     instagram_username='mcguime',
-            #     followers=profile.from_username(bot.context, 'mcguime').followers,
-            #     url_image='https://s2.glbimg.com/_d7OBvTEilzCgRAyQW8rTA3JyP4=/i.s3.glbimg.com/v1'
-            #               '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/j/w/07Dl8YRKKoyboVMwXrJw/mc'
-            #               '-guime-foto-330-270-bbb23.png'
-            # ),
+            User(
+                id=20,
+                name='Giovanna',
+                instagram_username='giovannallima',
+                followers=0,
+                url_image='https://s2.glbimg.com/VTb_LEFpplTDT67b7UQWbzxd5Hg=/i.s3.glbimg.com/v1'
+                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/2/P/69i1gqT1uVoeAea3YaJA'
+                          '/cabecograma-330x270-giovanna.png'
+            ),
+            User(
+                id=21,
+                name='Isabelle',
+                instagram_username='isabellenogueiraoficial',
+                followers=0,
+                url_image='https://s2.glbimg.com/kLHXVlOLS2I9alO7lasMUFH_F-A=/i.s3.glbimg.com/v1'
+                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/T/Y/ysO6RRQpAMjiidlZTwcw'
+                          '/cabecograma-330x270-isabelle.png'
+            ),
+            User(
+                id=22,
+                name='Juninho',
+                instagram_username='antonio_carlos_junior',
+                followers=0,
+                url_image='https://s2.glbimg.com/Gd-m2-h6Nu1nJc8t7zmU_VfuQYw=/i.s3.glbimg.com/v1'
+                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/Y/f/HyB2g5RuysBbmqvf8Cjw'
+                          '/cabecograma-330x270-juninho.png'
+            ),
+            User(
+                id=23,
+                name='Lucas Henrique',
+                instagram_username='lucas.capoeira',
+                followers=0,
+                url_image='https://s2.glbimg.com/lW76toHUsEfJJDban6oBUwK428k=/i.s3.glbimg.com/v1'
+                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/S/g/16kBnGSPGvPPTBBJZL3A'
+                          '/cabecograma-330x270-lucas-henrique.png'
+            ),
+            User(
+                id=24,
+                name='Michel',
+                instagram_username='michel_bh',
+                followers=0,
+                url_image='https://s2.glbimg.com/ZSeoBwPnDdfYp4pi5yeOaKb59T4=/i.s3.glbimg.com/v1'
+                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/J/w/SWjuAaRTGE2Lpp9AN1WQ'
+                          '/cabecograma-330x270-michel.png'
+            ),
+            User(
+                id=25,
+                name='Raqueli',
+                instagram_username='raquelicardozo',
+                followers=0,
+                url_image='https://s2.glbimg.com/aEq56bGHsfROcRGwWz6Rm4lHm3c=/i.s3.glbimg.com/v1'
+                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/B/p/n2bcoLT1Co1t23Yokojw'
+                          '/cabecograma-330x270-raquele.png'
+            ),
+            User(
+                id=26,
+                name='Thalyta',
+                instagram_username='thalytaa_alves',
+                followers=0,
+                url_image='https://s2.glbimg.com/bAvdDT2PYl1hi65_pB-pFp0nMXo=/i.s3.glbimg.com/v1'
+                          '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/I/u/GZG6TYQWWCE6sdAOeNKg'
+                          '/cabecograma-330x270-thalyta.png'
+            ),
         ]
 
         for user in users:
