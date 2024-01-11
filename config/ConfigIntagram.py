@@ -150,7 +150,7 @@ class ConfigInstagram:
             User(
                 id=16,
                 name='Vinicius Rodrigues',
-                instagram_username='vinirodriguesfc',
+                instagram_username='vinirodriguees',
                 followers=0,
                 url_image='https://s2.glbimg.com/GwqemLLWNI29hZ6bMwosuYvEQ_0=/i.s3.glbimg.com/v1'
                           '/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/T/y/vSL5KkQAapuCcyHBotTA'

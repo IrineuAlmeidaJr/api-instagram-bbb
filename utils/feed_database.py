@@ -42,10 +42,10 @@ def write_documents(current_date, brothers, dataframe, graphic_figure):
     graphic_figure.savefig(f'../data/bbb_instagram.png')
     with open(f'../data/bbb_instagram.txt', "w") as file:
         for item in brothers:
-            file.write(f'{item.Id},{item.Name},{item.Instagram_username},{item.Followers},{item.Url_image}')
+            file.write(f'{item.Id},{item.Name},{item.Instagram_username},{item.Followers},{item.Url_image}\n')
     with open(f'../backup/bbb_instagram_{current_date}.txt', "w") as file:
         for item in brothers:
-            file.write(f'{item.Id},{item.Name},{item.Instagram_username},{item.Followers},{item.Url_image}')
+            file.write(f'{item.Id},{item.Name},{item.Instagram_username},{item.Followers},{item.Url_image}\n')
 
 
 def execute():
